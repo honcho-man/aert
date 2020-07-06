@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aertsthethix | Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/general.css" type="text/css">
+    <link rel="stylesheet" href="css/smallscreen.css" type="text/css">
+    <link rel="stylesheet" href="css/widescreen.css" type="text/css">
+    <link rel="stylesheet" href="css/all.css" type="text/css">
+</head>
+<style>
+    html,
+    body {
+        background-color: white !important;
+    }
+    
+    .logo_2 h2 {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="header col-12 col-s-12">
+        <div class="header-logo logo_2 col-2 col-s-6">
+            <a href="index.html">
+                <h2>Aertsthethix<span id="pale">.</span></h2>
+            </a>
+        </div>
+        <div class="menu col-6 col-s-6">
+            <button onclick="openNav()">
+                     <p>
+                      menu <i class="fa fa-bars"></i>                
+                     </p>
+                    </button>
+        </div>
+    </div>
+    <div class="sidenav" id="mySidenav">
+        <span id="pale">navigation</span>
+        <button class="closebtn" onclick="closeNav()"><i class="fa fa-plus"></i></button>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+
+        <p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <span id="strong">voluptatem</span> porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p>
+        <div class="media_flex col-12 col-s-12">
+            <a href="">
+                <i class="fab fa-facebook"></i>
+            </a>
+
+            <a href="">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="contact_bg col-12 col-s-12">
+
+    </div>
+
+
+
+    <div class="contact col-12 col-s-12">
+        <div class="col-12 col-s-12">
+            <h3 id="pale" style="text-transform: uppercase;">contact us</h3>
+            <h1>Reach out to us now or just say Hello</h1>
+        </div>
+        <div class="form_contn col-12 col-s-12">
+            <div class="form_div col-5 col-s-12">
+                <form action="">
+                    <h4>SEND US A MESSAGE</h4>
+                    <input type="text" name="name" placeholder="Your  Name" required><br><br><br>
+                    <input type="email" name="email" placeholder="Your Email" required><br><br><br>
+                    <input type="phone" name="phone" placeholder="Your Phone Number (optional)"><br><br><br>
+                    <input type="text" name="subject" placeholder="Subject"><br><br><br>
+                    <textarea type="text" name="message" placeholder="Message" required></textarea><br><br>
+                    <input type="submit" value="submit">
+                </form>
+            </div>
+
+            <div class="info col-5 col-s-12">
+                <h4>CONTACT INFO</h4>
+                <div class="col-12 col-s-12">
+                    <p id="pale">General</p>
+                    <a href="index.html">Home</a><br>
+                    <a href="about.html">About Us</a><br>
+                    <a href="gallery.html">Gallery</a><br>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="col-12 col-s-12">
+                    <p id="pale">Email Us At</p>
+                    <a href="mailto:contact@aertsthetix.com">contact@aertsthetix.com</a><br>
+                    <a href="mailto:info@aertsthetix.com">info@aertsthetix.com</a>
+                </div>
+                <div class="col-12 col-s-12">
+                    <p id="pale">Give Us a Call</p>
+                    <a href="tel:08000000">08000000000</a><br>
+                    <a href="tel:08000000">08000000000</a>
+                </div>
+                <div class="social_media_icon col-12 col-s-12">
+                    <a href="">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+
+                    <a href="">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="last_item col-12 col-s-12">
+            <div class="col-4 col-s-12">
+                <div class="header-logo col-12 col-s-12">
+                    <a href="index.html">
+                        <h2>Aertsthethix<span id="pale">.</span></h2>
+                    </a>
+                </div>
+                <p>'Our works aren't just pictures, they're stories of people we've seen, met or heard'</p>
+            </div>
+            <div class="col-4 col-s-12">
+                <div class="header-logo col-12 col-s-12">
+                    <h2 style="font-weight: 400;">Get Notified</h2>
+                    <p style="margin-block-end: 0;">Suscribe to our newsletters.</p>
+                </div>
+                <div class="last_item_form col-12 col-s-12">
+                    <form action="">
+                        <input type="email" name="email" placeholder="Email Address">
+                        <input type="submit" value="SUSCRIBE">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="copyright col-12 col-s-12">
+            <p>&copy; <span style="color: white;">Aertsthethix</span> 2020</p>
+        </div>
+        <a class="top-link hide" href="" id="js-top" title="back to top">
+            <span><i class="fa fa-angle-up"></i></span>
+        </a>
+        <script>
+            const scrollToTopButton = document.getElementById("js-top")
+            const scrollFunc = () => {
+                let y = window.scrollY;
+                if (y > 0) {
+                    scrollToTopButton.className = ("top-link show");
+                } else {
+                    scrollToTopButton.className = ("top-link hide");
+                }
+            }
+
+            window.addEventListener("scroll", scrollFunc)
+
+            const scrollToTop = () => {
+                const c = document.documentElement.scrollTop || document.body.scrollTop;
+                if (c > 0) {
+                    window.requestAnimationFrame(scrollToTop);
+                    window.scrollTo(0, c - c / 10);
+                }
+            };
+
+            scrollToTopButton.onclick = function(e) {
+                e.preventDefault();
+                scrollToTop();
+            }
+        </script>
+        <script>
+            $(document).ready(function() {
+                // Add smooth scrolling to all links
+                $("a").on('click', function(event) {
+
+                    // Make sure this.hash has a value before overriding default behavior
+                    if (this.hash !== "") {
+                        // Prevent default anchor click behavior
+                        event.preventDefault();
+
+                        // Store hash
+                        var hash = this.hash;
+
+                        // Using jQuery's animate() method to add smooth page scroll
+                        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 800, function() {
+
+                            // Add hash (#) to URL when done scrolling (default click behavior)
+                            window.location.hash = hash;
+                        });
+                    } // End if
+                });
+            });
+        </script>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0"
+            }
+        </script>
+        <script>
+            jQuery(document).ready(function($) {
+
+                // global variables for script
+                var current, size;
+
+                $('.lightboxTrigger').click(function(e) {
+
+                    // prevent default click event
+                    e.preventDefault();
+
+                    // grab href from clicked element
+                    var image_href = $(this).attr("href");
+
+                    // determine the index of clicked trigger
+                    var slideNum = $('.lightboxTrigger').index(this);
+
+                    // find out if #lightbox exists
+                    if ($('#lightbox').length > 0) {
+                        // #lightbox exists
+                        $('#lightbox').fadeIn(300);
+                        // #lightbox does not exist - create and insert (runs 1st time only)
+                    } else {
+                        // create HTML markup for lightbox window
+                        var lightbox =
+                            '<div id="lightbox">' +
+                            '<i class="fa fa-plus fa_plus"></i>' +
+                            '<div id="slideshow">' +
+                            '<div class="nav">' +
+                            '<a class="prev slide-nav"><i class="fa fa-angle-left"></i></a>' +
+                            '<a class="next slide-nav"><i class="fa fa-angle-right"></i></a>' +
+                            '</div>' +
+                            '</div>' +
+                            '</div>';
+
+                        //insert lightbox HTML into page
+                        $('body').append(lightbox);
+
+                        // fill lightbox with .lightboxTrigger hrefs in #imageSet
+                        $('#imageSet').find('.lightboxTrigger').each(function() {
+                            var $href = $(this).attr('href');
+                            $('#slideshow').append(
+                                '<img src=" ' + $href + '">'
+                            );
+                        });
+
+                    }
+
+                    // setting size based on number of objects in slideshow
+                    size = $('#slideshow img').length;
+
+                    // hide all slide, then show the selected slide
+                    $('#slideshow img').hide();
+                    $('#slideshow img:eq(' + slideNum + ')').show();
+
+                    // set current to selected slide
+                    current = slideNum;
+                });
+
+                //Click anywhere on the page to get rid of lightbox window
+                $('body').on('click', '#lightbox', function() { // using .on() instead of .live(). more modern, and fixes event bubbling issues
+                    $('#lightbox').fadeOut(300);
+                });
+
+                // show/hide navigation when hovering over #slideshow
+                $('body').on({
+                    mouseenter: function() {
+                        $('.nav').fadeIn(300);
+                    },
+                    mouseleave: function() {
+                        $('.nav').fadeOut(300);
+                    }
+                }, '#slideshow');
+
+                // navigation prev/next
+                $('body').on('click', '.slide-nav', function(e) {
+
+                    // prevent default click event, and prevent event bubbling to prevent lightbox from closing
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    var $this = $(this);
+                    var dest;
+
+                    // looking for .prev
+                    if ($this.hasClass('prev')) {
+                        dest = current - 1;
+                        if (dest < 0) {
+                            dest = size - 1;
+                        }
+                    } else {
+                        // in absence of .prev, assume .next
+                        dest = current + 1;
+                        if (dest > size - 1) {
+                            dest = 0;
+                        }
+                    }
+
+                    // fadeOut curent slide, FadeIn next/prev slide
+                    $('#slideshow img:eq(' + current + ')').fadeOut(100);
+                    $('#slideshow img:eq(' + dest + ')').fadeIn(100);
+
+                    // update current slide
+                    current = dest;
+                });
+
+            });
+        </script>
+</body>
+
+</html>
+
+</html>

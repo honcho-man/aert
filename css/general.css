@@ -1,3 +1,5 @@
+            /*Designed By Honcho-man*/
+            
             * {
                 box-sizing: border-box;
             }
@@ -24,7 +26,6 @@
                 margin: 0;
                 padding: 0;
                 color: white;
-                background-color: rgb(5, 5, 5);
             }
             
             a {
@@ -505,7 +506,7 @@
                 width: 100%;
                 transition: transform 2s, filter .5s ease-in-out;
                 transform-origin: center center;
-                filter: brightness(50%);
+                filter: brightness(70%);
                 padding: 0;
             }
             
@@ -698,10 +699,6 @@
                 border: 1px solid rgba(0, 0, 0, 0.288);
             }
             
-            .last_item {
-                padding: ;
-            }
-            
             .media_flex {
                 display: flex;
                 justify-content: center;
@@ -734,6 +731,7 @@
                 font-size: 20px;
                 color: grey;
                 transition: .59s;
+                padding: 15px;
             }
             
             .reach_bg a:hover {
@@ -743,3 +741,4 @@
             .reach_bg h2 {
                 font-weight: 400;
             }
+            /*Designed By Honcho-man*

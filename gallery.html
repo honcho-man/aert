@@ -60,11 +60,79 @@
     </div>
 
 
-    <div class="contact_bg col-12 col-s-12">
+    <div class="row">
+        <div class="column">
+            <a href="images/gallery/Attachment-1.jpg">
+                <img src="images/gallery/Attachment-1.jpg" style="width:100%">
+            </a>
+            <a href="images/gallery/FullSizeRender (2).jpg">
+                <img src="images/gallery/FullSizeRender (2).jpg" style="width:100%">
+            </a>
+            <a href="images/gallery/FullSizeRender (3).jpg">
+                <img src="images/gallery/FullSizeRender (3).jpg" style="width:100%">
+            </a>
+            <a href="images/gallery/FullSizeRender.jpg">
+                <img src="images/gallery/FullSizeRender.jpg" style="width:100%">
+            </a>
+            <a href="images/gallery/IMG-9149.PNG">
+                <img src="images/gallery/IMG-9149.PNG" style="width:100%">
+            </a>
+        </div>
+        <div class="column">
+            <a href="images/gallery/IMG-9258.PNG">
+                <img src="images/gallery/IMG-9258.PNG" style="width:100%">
+            </a>
+            <a href="images/gallery/IMG-9501.PNG">
+                <img src="images/gallery/IMG-9501.PNG" style="width:100%">
+            </a>
+            <a href="images/gallery/IMG-9540.PNG">
+                <img src="images/gallery/IMG-9540.PNG" style="width:100%">
+            </a>
+            <a href="images/gallery/IMG-9593.PNG">
+                <img src="images/gallery/IMG-9593.PNG" style="width:100%">
+            </a>
+            <a href="images/gallery/IMG-9636.PNG">
+                <img src="images/gallery/IMG-9636.PNG" style="width:100%">
+            </a>
+        </div>
+        <div class="column">
+            <a href="images/gallery/image4.PNG">
+                <img src="images/gallery/image4.PNG" style="width:100%">
+            </a>
+            <a href="images/gallery/image (2).jpg">
+                <img src="images/gallery/image (2).jpg" style="width:100%">
+            </a>
+            <a href="images/gallery/image (3).jpg">
+                <img src="images/gallery/image (3).jpg" style="width:100%">
+            </a>
+            <a href="images/gallery/image (4).jpg">
+                <img src="images/gallery/image (4).jpg" style="width:100%">
+            </a>
+            <a href="images/gallery/image (5).jpg">
+                <img src="images/gallery/image (5).jpg" style="width:100%">
+            </a>
+        </div>
+        <div class="column">
+            <a href="images/gallery/image (1).jpg">
+                <img src="images/gallery/image (1).jpg" style="width:100%">
+            </a>
+            <a href="images/gallery/image (6).jpg">
+                <img src="images/gallery/image (6).jpg" style="width:100%">
+            </a>
+            <a href="images/gallery/image.jpg">
+                <img src="images/gallery/image.jpg" style="width:100%">
+            </a>
+
+            <a href="images/gallery/image1.PNG">
+                <img src="images/gallery/image1.PNG" style="width:100%">
+            </a>
+
+            <a href="images/gallery/image3.PNG">
+                <img src="images/gallery/image3.PNG" style="width:100%">
+            </a>
+        </div>
 
     </div>
-
-
 
     <div class="contact col-12 col-s-12">
         <div class="reach_bg col-12 col-s-12">
@@ -197,116 +265,7 @@
             document.getElementById("mySidenav").style.width = "0"
         }
     </script>
-    <script>
-        jQuery(document).ready(function($) {
 
-            // global variables for script
-            var current, size;
-
-            $('.lightboxTrigger').click(function(e) {
-
-                // prevent default click event
-                e.preventDefault();
-
-                // grab href from clicked element
-                var image_href = $(this).attr("href");
-
-                // determine the index of clicked trigger
-                var slideNum = $('.lightboxTrigger').index(this);
-
-                // find out if #lightbox exists
-                if ($('#lightbox').length > 0) {
-                    // #lightbox exists
-                    $('#lightbox').fadeIn(300);
-                    // #lightbox does not exist - create and insert (runs 1st time only)
-                } else {
-                    // create HTML markup for lightbox window
-                    var lightbox =
-                        '<div id="lightbox">' +
-                        '<i class="fa fa-plus fa_plus"></i>' +
-                        '<div id="slideshow">' +
-                        '<div class="nav">' +
-                        '<a class="prev slide-nav"><i class="fa fa-angle-left"></i></a>' +
-                        '<a class="next slide-nav"><i class="fa fa-angle-right"></i></a>' +
-                        '</div>' +
-                        '</div>' +
-                        '</div>';
-
-                    //insert lightbox HTML into page
-                    $('body').append(lightbox);
-
-                    // fill lightbox with .lightboxTrigger hrefs in #imageSet
-                    $('#imageSet').find('.lightboxTrigger').each(function() {
-                        var $href = $(this).attr('href');
-                        $('#slideshow').append(
-                            '<img src=" ' + $href + '">'
-                        );
-                    });
-
-                }
-
-                // setting size based on number of objects in slideshow
-                size = $('#slideshow img').length;
-
-                // hide all slide, then show the selected slide
-                $('#slideshow img').hide();
-                $('#slideshow img:eq(' + slideNum + ')').show();
-
-                // set current to selected slide
-                current = slideNum;
-            });
-
-            //Click anywhere on the page to get rid of lightbox window
-            $('body').on('click', '#lightbox', function() { // using .on() instead of .live(). more modern, and fixes event bubbling issues
-                $('#lightbox').fadeOut(300);
-            });
-
-            // show/hide navigation when hovering over #slideshow
-            $('body').on({
-                mouseenter: function() {
-                    $('.nav').fadeIn(300);
-                },
-                mouseleave: function() {
-                    $('.nav').fadeOut(300);
-                }
-            }, '#slideshow');
-
-            // navigation prev/next
-            $('body').on('click', '.slide-nav', function(e) {
-
-                // prevent default click event, and prevent event bubbling to prevent lightbox from closing
-                e.preventDefault();
-                e.stopPropagation();
-
-                var $this = $(this);
-                var dest;
-
-                // looking for .prev
-                if ($this.hasClass('prev')) {
-                    dest = current - 1;
-                    if (dest < 0) {
-                        dest = size - 1;
-                    }
-                } else {
-                    // in absence of .prev, assume .next
-                    dest = current + 1;
-                    if (dest > size - 1) {
-                        dest = 0;
-                    }
-                }
-
-                // fadeOut curent slide, FadeIn next/prev slide
-                $('#slideshow img:eq(' + current + ')').fadeOut(100);
-                $('#slideshow img:eq(' + dest + ')').fadeIn(100);
-
-                // update current slide
-                current = dest;
-            });
-
-        });
-    </script>
 </body>
-
-</html>
 
 </html>
